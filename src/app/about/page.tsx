@@ -843,7 +843,7 @@ export default function AboutPage() {
       </main>
 
       {/* Public Footer */}
-      <Footer />
+      <Footer variant="marketing" />
     </div>
   );
 }

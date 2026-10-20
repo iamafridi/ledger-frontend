@@ -218,7 +218,7 @@ export default function PricingPage() {
       </main>
 
       {/* Public Footer */}
-      <Footer />
+      <Footer variant="marketing" />
     </div>
   );
 }

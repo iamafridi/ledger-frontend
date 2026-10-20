@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export function Footer({ variant = "app" }: { variant?: "app" | "marketing" }) {
+export function Footer({ variant = "marketing" }: { variant?: "app" | "marketing" }) {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
@@ -20,122 +20,282 @@ export function Footer({ variant = "app" }: { variant?: "app" | "marketing" }) {
 
   return (
     <footer
-      className="site-footer"
       style={{
-        background: "linear-gradient(180deg, #0d1116 0%, #07090c 100%)",
-        borderTop: "1px solid var(--line)",
-        paddingTop: "var(--s-7)",
-        paddingBottom: "var(--s-5)",
+        backgroundColor: "#171817",
+        color: "#ACA4BD",
+        padding: "3.5rem 1.5rem 2rem 1.5rem",
+        borderTop: "1px solid #282A28",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      <div className="wrap stack-lg">
-        <div className="footer-grid">
-          <div className="footer-brand stack" style={{ gap: "var(--s-3)" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "var(--s-2)" }}>
-              <span
+      <style>{`
+        .ledger-footer-link {
+          color: #D1C9BD !important;
+          text-decoration: none;
+          transition: color 0.15s ease, transform 0.15s ease;
+          display: inline-block;
+          width: fit-content;
+        }
+        .ledger-footer-link:hover {
+          color: #FFFDF7 !important;
+          transform: translateX(2px);
+        }
+        .ledger-footer-legal-link {
+          color: #ACA4BD !important;
+          text-decoration: none;
+          transition: color 0.15s ease;
+        }
+        .ledger-footer-legal-link:hover {
+          color: #FFFDF7 !important;
+        }
+        .ledger-footer-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 2.5rem;
+          margin-bottom: 2.5rem;
+        }
+        @media (max-width: 640px) {
+          .ledger-footer-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+          }
+        }
+      `}</style>
+
+      <div
+        style={{
+          maxWidth: "1360px",
+          margin: "0 auto",
+        }}
+      >
+        <div className="ledger-footer-grid">
+          {/* Brand & Mission Column */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+            <Link
+              href="/"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.75rem",
+                textDecoration: "none",
+                width: "fit-content",
+              }}
+            >
+              <div
                 style={{
-                  fontFamily: "var(--font-sans), sans-serif",
-                  fontWeight: 900,
-                  fontSize: "1.65rem",
-                  letterSpacing: "-0.04em",
-                  color: "var(--ink)",
+                  width: "30px",
+                  height: "30px",
+                  borderRadius: "8px",
+                  backgroundColor: "#D8543D",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "0 2px 8px rgba(216, 84, 61, 0.35)",
+                  flexShrink: 0,
                 }}
               >
-                LEDGER
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M6 4V19H18" stroke="#F6F2E9" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+                  <circle cx="17.5" cy="11.5" r="2" fill="#F6F2E9" />
+                </svg>
+              </div>
+              <span
+                style={{
+                  fontSize: "1.35rem",
+                  fontWeight: 800,
+                  color: "#FFFDF7",
+                  letterSpacing: "-0.04em",
+                  fontFamily: "var(--font-sans), sans-serif",
+                }}
+              >
+                ledger
               </span>
-              <span className="chip chip--brand" style={{ fontSize: "0.625rem" }}>
+              <span
+                style={{
+                  fontSize: "0.65rem",
+                  fontWeight: 700,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.06em",
+                  background: "rgba(216, 84, 61, 0.15)",
+                  color: "#D8543D",
+                  padding: "0.2rem 0.55rem",
+                  borderRadius: "999px",
+                  border: "1px solid rgba(216, 84, 61, 0.3)",
+                }}
+              >
                 Precision Accounting
               </span>
+            </Link>
+
+            <p style={{ margin: 0, fontSize: "0.875rem", lineHeight: 1.65, color: "#ACA4BD", maxWidth: "340px" }}>
+              Every taka accounted for, down to the exact paisa. High-performance double-entry accounting engine computing in exact decimal arithmetic with zero float drift.
+            </p>
+
+            <div
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                gap: "0.6rem",
+                padding: "0.75rem 0.9rem",
+                background: "rgba(216, 84, 61, 0.08)",
+                border: "1px solid rgba(216, 84, 61, 0.25)",
+                borderRadius: "8px",
+                fontSize: "0.78rem",
+                color: "#E2DDD3",
+                lineHeight: 1.5,
+                maxWidth: "360px",
+              }}
+            >
+              <span style={{ color: "#D8543D", fontWeight: 800, fontSize: "0.95rem", lineHeight: 1, flexShrink: 0 }}>✓</span>
+              <span>Verified against statutory NBR Form 9.1 and continuous double-entry invariant rules (I1–I16).</span>
             </div>
-            <p className="note footer-tagline" style={{ margin: 0, lineHeight: 1.6, color: "var(--ink-muted)" }}>
-              Every taka accounted for, down to the exact paisa. A high-performance double-entry accounting engine computing in exact decimal arithmetic with zero float drift.
-            </p>
-            <p className="footer-verified" style={{ margin: 0, color: "var(--lime)", fontWeight: 600 }}>
-              <span className="footer-tick" aria-hidden="true" style={{ marginRight: "var(--s-1)" }}>
-                ✓
-              </span>
-              Verified against all 25 published cases and 14 autonomous double-entry invariant rules.
-            </p>
           </div>
 
-          {variant === "app" ? (
-            <nav className="footer-col stack" style={{ gap: "var(--s-2)" }} aria-label="Application">
-              <p className="label" style={{ color: "var(--lime)" }}>Application</p>
-              <Link href="/dashboard">Dashboard</Link>
-              <Link href="/sales">Sales & Invoicing</Link>
-              <Link href="/purchases">Purchases & Payables</Link>
-              <Link href="/staff">Staff & Payroll</Link>
-              <Link href="/assets">Fixed Asset Register</Link>
-              <Link href="/tax">Statutory VAT</Link>
-              <Link href="/reports">Financial Reports</Link>
-            </nav>
-          ) : (
-            <nav className="footer-col stack" style={{ gap: "var(--s-2)" }} aria-label="Product">
-              <p className="label" style={{ color: "var(--lime)" }}>Navigation</p>
-              <Link href="/modules">Modules Directory</Link>
-              <Link href="/about">About & Ecosystem</Link>
-              <Link href="/pricing">Pricing & Plans</Link>
-              <Link href="/terms">Terms of Service</Link>
-              <Link href="/privacy">Privacy Policy</Link>
-              <Link href="/login">Launch Demo Account</Link>
-            </nav>
-          )}
+          {/* Navigation Column 1: Platform */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", fontSize: "0.875rem" }}>
+            <span
+              style={{
+                fontSize: "0.75rem",
+                fontFamily: "var(--font-mono), monospace",
+                fontWeight: 700,
+                color: "#D8543D",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+              }}
+            >
+              Platform
+            </span>
+            <Link href="/" className="ledger-footer-link">
+              Overview
+            </Link>
+            <Link href="/modules" className="ledger-footer-link">
+              Modules Directory (19)
+            </Link>
+            <Link href="/about" className="ledger-footer-link">
+              About &amp; Topology
+            </Link>
+            <Link href="/pricing" className="ledger-footer-link">
+              Pricing &amp; Plans
+            </Link>
+            <Link href="/login" className="ledger-footer-link">
+              Sign In ↗
+            </Link>
+            <Link href="/login?redirect=/dashboard" className="ledger-footer-link">
+              Launch Live Demo
+            </Link>
+          </div>
 
-          <div className="footer-col stack" style={{ gap: "var(--s-2)" }}>
-            <p className="label" style={{ color: "var(--lime)" }}>Mathematical Integrity</p>
-            <span className="muted">Exact decimal arithmetic (decimal.js)</span>
-            <span className="muted">Half-up paisa rounding at every step</span>
-            <span className="muted">Continuous invariant checks (I1–I6)</span>
-            <span className="muted">Statutory NBR Form 9.1 whole-taka rules</span>
-            <span className="muted">Zero timezone calendar arithmetic</span>
+          {/* Navigation Column 2: Application / Accounting Core */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", fontSize: "0.875rem" }}>
+            <span
+              style={{
+                fontSize: "0.75rem",
+                fontFamily: "var(--font-mono), monospace",
+                fontWeight: 700,
+                color: "#D8543D",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+              }}
+            >
+              {variant === "app" ? "Application" : "Accounting Core"}
+            </span>
+            <Link href="/dashboard" className="ledger-footer-link">
+              Executive Dashboard
+            </Link>
+            <Link href="/sales" className="ledger-footer-link">
+              Sales &amp; Invoicing
+            </Link>
+            <Link href="/purchases" className="ledger-footer-link">
+              Purchases &amp; Payables
+            </Link>
+            <Link href="/staff" className="ledger-footer-link">
+              Staff &amp; Payroll
+            </Link>
+            <Link href="/assets" className="ledger-footer-link">
+              Fixed Asset Register
+            </Link>
+            <Link href="/tax" className="ledger-footer-link">
+              Statutory NBR VAT 9.1
+            </Link>
+            <Link href="/reports" className="ledger-footer-link">
+              Financial Statements
+            </Link>
+          </div>
+
+          {/* Mathematical Integrity Column */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", fontSize: "0.875rem" }}>
+            <span
+              style={{
+                fontSize: "0.75rem",
+                fontFamily: "var(--font-mono), monospace",
+                fontWeight: 700,
+                color: "#D8543D",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+              }}
+            >
+              Mathematical Integrity
+            </span>
+            <span style={{ color: "#9E9A91" }}>Exact decimal arithmetic (decimal.js)</span>
+            <span style={{ color: "#9E9A91" }}>Half-up paisa rounding at every step</span>
+            <span style={{ color: "#9E9A91" }}>Continuous invariant checks (I1–I16)</span>
+            <span style={{ color: "#9E9A91" }}>Statutory NBR Form 9.1 whole-taka</span>
+            <span style={{ color: "#9E9A91" }}>Zero timezone calendar arithmetic</span>
+            <span style={{ color: "#9E9A91" }}>Append-only immutable audit trail</span>
           </div>
         </div>
 
+        {/* Bottom Copyright & Legal Row */}
         <div
-          className="footer-base row-between"
           style={{
-            borderTop: "1px solid var(--line)",
-            paddingTop: "var(--s-4)",
-            fontSize: "var(--t-xs)",
+            paddingTop: "1.75rem",
+            borderTop: "1px solid #242624",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: "1rem",
+            fontSize: "0.8rem",
+            fontFamily: "var(--font-mono), monospace",
+            color: "#827F76",
           }}
         >
-          <p className="label" style={{ margin: 0, textTransform: "none", color: "var(--ink-muted)" }}>
-            Ledger — Precision-engineered double-entry accounting software.
-          </p>
-          <div>
-            <span className="label footer-muted" style={{ margin: 0 }}>Amounts in Bangladeshi Taka (BDT)</span>
+          <div>© 2026 Ledger. All rights reserved.</div>
+          <div style={{ color: "#D8543D" }}>Built with care in Bangladesh</div>
+          <div style={{ display: "flex", gap: "0.85rem", alignItems: "center", flexWrap: "wrap" }}>
+            <Link href="/privacy" className="ledger-footer-legal-link">Privacy</Link>
+            <span>·</span>
+            <Link href="/terms" className="ledger-footer-legal-link">Terms</Link>
+            <span>·</span>
+            <Link href="/about" className="ledger-footer-legal-link">Security</Link>
+            <span>·</span>
+            <span style={{ color: "#827F76" }}>Amounts in BDT</span>
           </div>
         </div>
 
-        {/* Luminous Typographical Watermark at the Bottom */}
+        {/* Monumental LEDGER Typographic Landmark */}
         <div
           style={{
+            marginTop: "1.75rem",
+            paddingTop: "1.25rem",
+            borderTop: "1px solid #1C1E1C",
+            overflow: "hidden",
+            textAlign: "center",
             userSelect: "none",
             pointerEvents: "none",
-            textAlign: "center",
-            marginTop: "var(--s-6)",
-            marginBottom: "calc(-1 * var(--s-4))",
-            overflow: "hidden",
-            position: "relative",
           }}
         >
           <span
             style={{
-              fontFamily: "var(--font-sans), sans-serif",
-              fontSize: "clamp(7rem, 26vw, 22rem)",
-              fontWeight: 900,
-              letterSpacing: "-0.055em",
-              lineHeight: 0.75,
               display: "block",
+              fontFamily: "var(--font-serif), Georgia, serif",
+              fontSize: "clamp(5.5rem, 18vw, 15rem)",
+              lineHeight: "0.82",
+              fontWeight: 700,
+              letterSpacing: "-0.04em",
+              color: "rgba(255, 253, 247, 0.08)",
               textTransform: "uppercase",
-              background: "linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(184, 255, 46, 0.12) 40%, rgba(56, 189, 248, 0.04) 80%, transparent 100%)",
-              WebkitBackgroundClip: "text",
-              backgroundClip: "text",
-              color: "transparent",
-              WebkitTextStroke: "1px rgba(184, 255, 46, 0.1)",
-              filter: "drop-shadow(0 0 40px rgba(184, 255, 46, 0.08))",
             }}
           >
             LEDGER
@@ -143,31 +303,41 @@ export function Footer({ variant = "app" }: { variant?: "app" | "marketing" }) {
         </div>
       </div>
 
-      {/* Single Floating Upward Arrow (↑) Back-to-Top Button */}
+      {/* Floating Upward Arrow (↑) Back-to-Top Button */}
       {showScrollTop ? (
         <button
           type="button"
           onClick={scrollToTop}
           style={{
             position: "fixed",
-            bottom: "var(--s-5)",
-            right: "var(--s-5)",
-            zIndex: 60,
-            width: "48px",
-            height: "48px",
+            bottom: "1.5rem",
+            right: "1.5rem",
+            zIndex: 90,
+            width: "44px",
+            height: "44px",
             borderRadius: "50%",
-            background: "rgba(13, 17, 22, 0.9)",
-            color: "var(--lime)",
-            border: "1px solid rgba(184, 255, 46, 0.4)",
-            boxShadow: "0 0 20px rgba(184, 255, 46, 0.25), 0 10px 25px rgba(0, 0, 0, 0.8)",
-            backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
+            background: "#1E201E",
+            color: "#FAF7F2",
+            border: "1px solid rgba(216, 84, 61, 0.4)",
+            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.5), 0 0 12px rgba(216, 84, 61, 0.2)",
+            backdropFilter: "blur(8px)",
+            WebkitBackdropFilter: "blur(8px)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            fontSize: "1.25rem",
+            fontSize: "1.2rem",
             cursor: "pointer",
-            transition: "all var(--fast) var(--ease)",
+            transition: "all 0.2s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "#D8543D";
+            e.currentTarget.style.borderColor = "#D8543D";
+            e.currentTarget.style.transform = "translateY(-2px)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "#1E201E";
+            e.currentTarget.style.borderColor = "rgba(216, 84, 61, 0.4)";
+            e.currentTarget.style.transform = "translateY(0)";
           }}
           aria-label="Back to top"
         >
