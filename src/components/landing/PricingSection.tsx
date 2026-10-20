@@ -71,9 +71,9 @@ export function PricingSection() {
   ];
 
   return (
-    <section id="pricing" style={{ padding: "clamp(4rem, 7vw, 6.5rem) 2rem", maxWidth: "1440px", margin: "0 auto" }}>
+    <section id="pricing" style={{ padding: "clamp(2rem, 3.5vw, 3rem) 2rem", maxWidth: "1440px", margin: "0 auto" }}>
       {/* Header */}
-      <div style={{ textAlign: "center", maxWidth: "680px", margin: "0 auto 3rem" }}>
+      <div style={{ textAlign: "center", maxWidth: "680px", margin: "0 auto 2rem" }}>
         <div className="tag-chip" style={{ marginBottom: "1rem" }}>
           <span className="tag-chip-check">✓</span>
           <span>Transparent Pricing</span>

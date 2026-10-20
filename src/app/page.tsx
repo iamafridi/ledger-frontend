@@ -77,7 +77,7 @@ export default function LandingPage() {
       />
 
       {/* Subtle top spacer for fixed header bar */}
-      <div style={{ height: "clamp(3.5rem, 5vw, 4.25rem)" }} />
+      <div style={{ height: "clamp(1.25rem, 2vw, 1.75rem)" }} />
 
       {/* ────────────────────────────────────────────────────────────────────────
           2. HERO SECTION
@@ -85,7 +85,7 @@ export default function LandingPage() {
       <section
         id="product"
         style={{
-          padding: "clamp(2rem, 4vw, 3.5rem) 2rem",
+          padding: "clamp(1.5rem, 3vw, 2.25rem) 2rem",
           maxWidth: "1440px",
           margin: "0 auto",
         }}
@@ -94,7 +94,7 @@ export default function LandingPage() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 500px), 1fr))",
-            gap: "3rem",
+            gap: "2.25rem",
             alignItems: "center",
           }}
         >
@@ -108,7 +108,7 @@ export default function LandingPage() {
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
                 color: "#54524c",
-                marginBottom: "1.25rem",
+                marginBottom: "0.85rem",
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.55rem",
@@ -131,7 +131,7 @@ export default function LandingPage() {
                 fontWeight: 700,
                 letterSpacing: "-0.035em",
                 color: "#141514",
-                marginBottom: "1.75rem",
+                marginBottom: "1rem",
               }}
             >
               Every taka. <br />
@@ -144,7 +144,7 @@ export default function LandingPage() {
                 fontSize: "1.08rem",
                 lineHeight: "1.65",
                 color: "#54524c",
-                marginBottom: "2rem",
+                marginBottom: "1.25rem",
               }}
             >
               Ledger brings personal money and business accounting into one calm, rigorous system — so you can see what
@@ -157,7 +157,7 @@ export default function LandingPage() {
                 display: "flex",
                 flexWrap: "wrap",
                 gap: "0.5rem",
-                marginBottom: "2rem",
+                marginBottom: "1.25rem",
               }}
             >
               <span
@@ -217,7 +217,7 @@ export default function LandingPage() {
                 alignItems: "center",
                 gap: "1.25rem",
                 flexWrap: "wrap",
-                marginBottom: "2.5rem",
+                marginBottom: "1.5rem",
               }}
             >
               <Link
@@ -329,7 +329,7 @@ export default function LandingPage() {
       ──────────────────────────────────────────────────────────────────────── */}
       <section
         style={{
-          padding: "clamp(2.5rem, 5vw, 4rem) 2rem",
+          padding: "clamp(1.75rem, 3vw, 2.5rem) 2rem",
           maxWidth: "1360px",
           margin: "0 auto",
         }}
@@ -338,7 +338,7 @@ export default function LandingPage() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 480px), 1fr))",
-            gap: "3.5rem",
+            gap: "2.25rem",
             alignItems: "center",
           }}
         >
@@ -350,7 +350,7 @@ export default function LandingPage() {
                 letterSpacing: "0.08em",
                 color: "#827F76",
                 display: "block",
-                marginBottom: "1rem",
+                marginBottom: "0.75rem",
               }}
             >
               01 / The point of it all
@@ -363,18 +363,18 @@ export default function LandingPage() {
                 fontWeight: 700,
                 letterSpacing: "-0.02em",
                 color: "#171817",
-                marginBottom: "1.25rem",
+                marginBottom: "1rem",
               }}
             >
               Financial clarity <br />
               <em style={{ fontStyle: "italic", fontWeight: 400, color: "#D8543D" }}>without the noise.</em>
             </h2>
 
-            <p style={{ fontSize: "1.12rem", lineHeight: "1.7", color: "#363532", marginBottom: "1.25rem" }}>
+            <p style={{ fontSize: "1.12rem", lineHeight: "1.65", color: "#363532", marginBottom: "1rem" }}>
               Money gets complicated fast. Ledger gives it somewhere exact to go — from the receipt in your pocket to the
               balance sheet your business depends on.
             </p>
-            <p style={{ fontSize: "1.02rem", lineHeight: "1.65", color: "#827F76", marginBottom: "2rem" }}>
+            <p style={{ fontSize: "1.02rem", lineHeight: "1.65", color: "#827F76", marginBottom: "1.25rem" }}>
               One thoughtful system. Two editions. A clear line from today’s transaction to tomorrow’s decision.
             </p>
             <a
@@ -405,17 +405,8 @@ export default function LandingPage() {
       {/* ────────────────────────────────────────────────────────────────────────
           5. CORE ENTERPRISE WORKFLOWS BENTO GRID
       ──────────────────────────────────────────────────────────────────────── */}
-      <section
-        id="workflows"
-        style={{
-          padding: "clamp(2.5rem, 5vw, 4rem) 2rem",
-          maxWidth: "1360px",
-          margin: "0 auto",
-        }}
-      >
-        <span id="editions" style={{ display: "none" }} />
-        <CoreWorkflowBento />
-      </section>
+      <span id="editions" style={{ display: "none" }} />
+      <CoreWorkflowBento />
 
       {/* ────────────────────────────────────────────────────────────────────────
           06. BUSINESS BANNER / CTA
@@ -423,7 +414,7 @@ export default function LandingPage() {
       <section
         style={{
           backgroundColor: "#0d0f0d",
-          padding: "clamp(2.75rem, 5vw, 4.25rem) 2rem",
+          padding: "clamp(2rem, 3.5vw, 2.75rem) 2rem",
           borderTop: "1px solid #232623",
           borderBottom: "1px solid #232623",
         }}
@@ -434,7 +425,7 @@ export default function LandingPage() {
             margin: "0 auto",
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "3rem",
+            gap: "2rem",
             alignItems: "center",
           }}
         >
@@ -447,19 +438,19 @@ export default function LandingPage() {
                 fontWeight: 700,
                 letterSpacing: "-0.02em",
                 color: "#FFFDF7",
-                marginBottom: "1.5rem",
+                marginBottom: "1rem",
               }}
             >
               Your business deserves a <br />
               <em style={{ fontStyle: "italic", fontWeight: 400, color: "#D8543D" }}>real</em> financial system.
             </h2>
-            <p style={{ fontSize: "1.08rem", lineHeight: "1.7", color: "#ACA4BD", marginBottom: "2rem" }}>
+            <p style={{ fontSize: "1.08rem", lineHeight: "1.65", color: "#ACA4BD", marginBottom: "1.25rem" }}>
               Ledger is the accounting backbone for Bangladesh SMEs — rigorous enough for the books, calm enough for the
               people running the business.
             </p>
 
             {/* Feature Chips */}
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.65rem", marginBottom: "2.5rem" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.65rem", marginBottom: "1.5rem" }}>
               {[
                 "VAT & withholding",
                 "Inventory & costing",
@@ -512,16 +503,7 @@ export default function LandingPage() {
       {/* ────────────────────────────────────────────────────────────────────────
           6.5 BUSINESS ROI & TIME-SAVINGS CALCULATOR
       ──────────────────────────────────────────────────────────────────────── */}
-      <section
-        id="roi-calculator"
-        style={{
-          padding: "clamp(2.5rem, 5vw, 4rem) 2rem",
-          maxWidth: "1360px",
-          margin: "0 auto",
-        }}
-      >
-        <BusinessRoiCalculator />
-      </section>
+      <BusinessRoiCalculator />
 
       {/* ────────────────────────────────────────────────────────────────────────
           7. LEDGER PRINCIPLES (The Standard)
@@ -529,12 +511,12 @@ export default function LandingPage() {
       <section
         id="principles"
         style={{
-          padding: "clamp(2.5rem, 5vw, 4rem) 2rem",
+          padding: "clamp(2rem, 3.5vw, 2.75rem) 2rem",
           maxWidth: "1360px",
           margin: "0 auto",
         }}
       >
-        <div style={{ maxWidth: "720px", marginBottom: "3.5rem" }}>
+        <div style={{ maxWidth: "720px", marginBottom: "1.75rem" }}>
           <span
             style={{
               fontFamily: "var(--font-mono), monospace",
@@ -542,7 +524,7 @@ export default function LandingPage() {
               letterSpacing: "0.08em",
               color: "#827F76",
               display: "block",
-              marginBottom: "1rem",
+              marginBottom: "0.75rem",
             }}
           >
             04 / The Ledger standard
@@ -555,7 +537,7 @@ export default function LandingPage() {
               fontWeight: 700,
               letterSpacing: "-0.02em",
               color: "#171817",
-              marginBottom: "1.25rem",
+              marginBottom: "1rem",
             }}
           >
             Quietly rigorous. <br />
@@ -571,7 +553,7 @@ export default function LandingPage() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(310px, 1fr))",
-            gap: "2rem",
+            gap: "1.5rem",
           }}
         >
           {/* Bento Card 1: Deterministic Paisa Math Engine */}
@@ -894,12 +876,12 @@ export default function LandingPage() {
       <section
         id="interactive-experience"
         style={{
-          padding: "clamp(4.5rem, 8vw, 7.5rem) 2rem",
+          padding: "clamp(2rem, 3.5vw, 2.75rem) 2rem",
           maxWidth: "1360px",
           margin: "0 auto",
         }}
       >
-        <div style={{ maxWidth: "760px", marginBottom: "3.5rem" }}>
+        <div style={{ maxWidth: "760px", marginBottom: "1.75rem" }}>
           <span
             style={{
               fontFamily: "var(--font-mono), monospace",
@@ -908,7 +890,7 @@ export default function LandingPage() {
               color: "#D8543D",
               textTransform: "uppercase",
               display: "block",
-              marginBottom: "1rem",
+              marginBottom: "0.75rem",
               fontWeight: 600,
             }}
           >
@@ -922,7 +904,7 @@ export default function LandingPage() {
               fontWeight: 700,
               letterSpacing: "-0.02em",
               color: "#171817",
-              marginBottom: "1.25rem",
+              marginBottom: "1rem",
             }}
           >
             Tactile instruments. <br />
@@ -937,13 +919,13 @@ export default function LandingPage() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
-            gap: "3rem",
+            gap: "2rem",
             alignItems: "start",
           }}
         >
           {/* Column 1: Journal Voucher Stack */}
           <div>
-            <div style={{ marginBottom: "1.25rem" }}>
+            <div style={{ marginBottom: "1rem" }}>
               <span
                 style={{
                   fontFamily: "var(--font-mono), monospace",
@@ -967,7 +949,7 @@ export default function LandingPage() {
 
           {/* Column 2: Interactive Thermal Receipt Scanner */}
           <div>
-            <div style={{ marginBottom: "1.25rem" }}>
+            <div style={{ marginBottom: "1rem" }}>
               <span
                 style={{
                   fontFamily: "var(--font-mono), monospace",
@@ -1004,7 +986,7 @@ export default function LandingPage() {
         style={{
           borderTop: "1px solid #D9D2C5",
           borderBottom: "1px solid #D9D2C5",
-          padding: "clamp(4.5rem, 6vw, 6.5rem) 2rem",
+          padding: "clamp(2rem, 3.5vw, 2.75rem) 2rem",
           backgroundColor: "#FAF7F0",
         }}
       >
@@ -1017,7 +999,7 @@ export default function LandingPage() {
               fontWeight: 400,
               fontStyle: "italic",
               color: "#171817",
-              margin: "0 0 1.5rem 0",
+              margin: "0 0 1.25rem 0",
             }}
           >
             “Ledger doesn’t just tell you where the money went. It helps you decide where it can go next.”
@@ -1031,7 +1013,7 @@ export default function LandingPage() {
               color: "#827F76",
               fontStyle: "normal",
               display: "block",
-              marginBottom: "3.5rem",
+              marginBottom: "1.75rem",
             }}
           >
             — The Ledger principle
@@ -1042,8 +1024,8 @@ export default function LandingPage() {
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              gap: "2.5rem",
-              paddingTop: "3rem",
+              gap: "2rem",
+              paddingTop: "2rem",
               borderTop: "1px solid #E6DFD1",
             }}
           >
@@ -1087,30 +1069,12 @@ export default function LandingPage() {
       {/* ────────────────────────────────────────────────────────────────────────
           8.5 TRANSPARENT SAAS PRICING TIERS
       ──────────────────────────────────────────────────────────────────────── */}
-      <section
-        id="pricing"
-        style={{
-          padding: "clamp(2.5rem, 5vw, 4rem) 2rem",
-          maxWidth: "1360px",
-          margin: "0 auto",
-        }}
-      >
-        <PricingSection />
-      </section>
+      <PricingSection />
 
       {/* ────────────────────────────────────────────────────────────────────────
           8.6 SOCIAL PROOF, STATS & EXECUTIVE TESTIMONIALS
       ──────────────────────────────────────────────────────────────────────── */}
-      <section
-        id="proof"
-        style={{
-          padding: "clamp(2.5rem, 5vw, 4rem) 2rem",
-          maxWidth: "1360px",
-          margin: "0 auto",
-        }}
-      >
-        <SocialProofTestimonials />
-      </section>
+      <SocialProofTestimonials />
 
       {/* ────────────────────────────────────────────────────────────────────────
           9. ROADMAP SECTION
@@ -1118,12 +1082,12 @@ export default function LandingPage() {
       <section
         id="roadmap"
         style={{
-          padding: "clamp(2.5rem, 5vw, 4rem) 2rem",
+          padding: "clamp(2rem, 3.5vw, 2.75rem) 2rem",
           maxWidth: "1360px",
           margin: "0 auto",
         }}
       >
-        <div style={{ maxWidth: "620px", marginBottom: "3.5rem" }}>
+        <div style={{ maxWidth: "620px", marginBottom: "1.75rem" }}>
           <span
             style={{
               fontFamily: "var(--font-mono), monospace",
@@ -1131,7 +1095,7 @@ export default function LandingPage() {
               letterSpacing: "0.08em",
               color: "#827F76",
               display: "block",
-              marginBottom: "1rem",
+              marginBottom: "0.75rem",
             }}
           >
             05 / The road ahead
@@ -1143,7 +1107,7 @@ export default function LandingPage() {
               fontWeight: 700,
               letterSpacing: "-0.02em",
               color: "#171817",
-              marginBottom: "1.25rem",
+              marginBottom: "1rem",
             }}
           >
             Already useful. <br />
@@ -1159,7 +1123,7 @@ export default function LandingPage() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "2rem",
+            gap: "1.5rem",
           }}
         >
           {/* Card 1: Available Now */}
@@ -1168,7 +1132,7 @@ export default function LandingPage() {
               backgroundColor: "#FFFDF7",
               border: "1px solid #D9D2C5",
               borderRadius: "14px",
-              padding: "2rem",
+              padding: "1.75rem",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
@@ -1197,7 +1161,7 @@ export default function LandingPage() {
                 Personal finance, double-entry accounting, tax, inventory, fixed assets, banking, payroll and more.
               </p>
             </div>
-            <span style={{ fontSize: "0.78rem", fontFamily: "var(--font-mono), monospace", color: "#827F76", marginTop: "1.75rem" }}>
+            <span style={{ fontSize: "0.78rem", fontFamily: "var(--font-mono), monospace", color: "#827F76", marginTop: "1.5rem" }}>
               Phases P0 — P11
             </span>
           </div>
@@ -1208,7 +1172,7 @@ export default function LandingPage() {
               backgroundColor: "#FFFDF7",
               border: "1px solid #D9D2C5",
               borderRadius: "14px",
-              padding: "2rem",
+              padding: "1.75rem",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
@@ -1237,7 +1201,7 @@ export default function LandingPage() {
                 Recurring entries, budgets, segments and business insights that connect the numbers to the bigger picture.
               </p>
             </div>
-            <span style={{ fontSize: "0.78rem", fontFamily: "var(--font-mono), monospace", color: "#827F76", marginTop: "1.75rem" }}>
+            <span style={{ fontSize: "0.78rem", fontFamily: "var(--font-mono), monospace", color: "#827F76", marginTop: "1.5rem" }}>
               Phases P12 — P13
             </span>
           </div>
@@ -1248,7 +1212,7 @@ export default function LandingPage() {
               backgroundColor: "#FFFDF7",
               border: "1px solid #D9D2C5",
               borderRadius: "14px",
-              padding: "2rem",
+              padding: "1.75rem",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
@@ -1277,7 +1241,7 @@ export default function LandingPage() {
                 A more guided month-end, printable documents, and a calmer path from close to confidence.
               </p>
             </div>
-            <span style={{ fontSize: "0.78rem", fontFamily: "var(--font-mono), monospace", color: "#827F76", marginTop: "1.75rem" }}>
+            <span style={{ fontSize: "0.78rem", fontFamily: "var(--font-mono), monospace", color: "#827F76", marginTop: "1.5rem" }}>
               Built step by step
             </span>
           </div>
@@ -1287,16 +1251,7 @@ export default function LandingPage() {
       {/* ────────────────────────────────────────────────────────────────────────
           9.5 COMMERCIAL FAQ SECTION
       ──────────────────────────────────────────────────────────────────────── */}
-      <section
-        id="faq"
-        style={{
-          padding: "clamp(2.5rem, 5vw, 4rem) 2rem",
-          maxWidth: "1360px",
-          margin: "0 auto",
-        }}
-      >
-        <LandingFaqSection />
-      </section>
+      <LandingFaqSection />
 
       {/* ────────────────────────────────────────────────────────────────────────
           10. PREMIUM CTA SECTION
@@ -1306,7 +1261,7 @@ export default function LandingPage() {
         style={{
           backgroundColor: "#D8543D",
           color: "#FFFDF7",
-          padding: "clamp(3rem, 5vw, 4.5rem) 2rem",
+          padding: "clamp(2.25rem, 3.5vw, 3rem) 2rem",
         }}
       >
         <div
@@ -1315,7 +1270,7 @@ export default function LandingPage() {
             margin: "0 auto",
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "3.5rem",
+            gap: "2.25rem",
             alignItems: "center",
           }}
         >
@@ -1329,7 +1284,7 @@ export default function LandingPage() {
                 color: "#ffc9c0",
                 textTransform: "uppercase",
                 display: "block",
-                marginBottom: "1rem",
+                marginBottom: "0.75rem",
               }}
             >
               Start with a clearer picture
@@ -1341,7 +1296,7 @@ export default function LandingPage() {
                 lineHeight: "1.12",
                 fontWeight: 700,
                 letterSpacing: "-0.02em",
-                margin: "0 0 1.5rem 0",
+                margin: "0 0 1rem 0",
               }}
             >
               Make your next <br />
@@ -1358,7 +1313,7 @@ export default function LandingPage() {
               backgroundColor: "#FFFDF7",
               color: "#171817",
               borderRadius: "16px",
-              padding: "2.25rem",
+              padding: "1.75rem",
               boxShadow: "0 24px 60px rgba(0, 0, 0, 0.25)",
             }}
           >
@@ -1489,7 +1444,7 @@ export default function LandingPage() {
         style={{
           backgroundColor: "#171817",
           color: "#827F76",
-          padding: "4.5rem 2rem 2.5rem 2rem",
+          padding: "3rem 2rem 2rem 2rem",
           borderTop: "1px solid #2a2c2a",
         }}
       >
@@ -1503,8 +1458,8 @@ export default function LandingPage() {
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-              gap: "3rem",
-              marginBottom: "3.5rem",
+              gap: "2.25rem",
+              marginBottom: "2rem",
             }}
           >
             {/* Left Brand Col */}
@@ -1617,8 +1572,8 @@ export default function LandingPage() {
           {/* Monumental LEDGER Typographic Landmark */}
           <div
             style={{
-              marginTop: "3.5rem",
-              paddingTop: "2rem",
+              marginTop: "2rem",
+              paddingTop: "1.25rem",
               borderTop: "1px solid #1c1d1c",
               overflow: "hidden",
               textAlign: "center",

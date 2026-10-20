@@ -34,9 +34,9 @@ export function LandingFaqSection() {
   ];
 
   return (
-    <section id="faq" style={{ padding: "clamp(4rem, 7vw, 6.5rem) 2rem", maxWidth: "960px", margin: "0 auto" }}>
+    <section id="faq" style={{ padding: "clamp(2rem, 3.5vw, 3rem) 2rem", maxWidth: "960px", margin: "0 auto" }}>
       {/* Header */}
-      <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
+      <div style={{ textAlign: "center", marginBottom: "2rem" }}>
         <div className="tag-chip" style={{ marginBottom: "1rem" }}>
           <span className="tag-chip-check">✓</span>
           <span>Frequently Answered Questions</span>

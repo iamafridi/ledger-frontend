@@ -68,14 +68,14 @@ export function StackScrollSection() {
   return (
     <section
       id="why-ledger"
-      className="section"
       style={{
         background: "linear-gradient(180deg, #07090c 0%, #0d1116 50%, #07090c 100%)",
         position: "relative",
         overflow: "hidden",
+        padding: "clamp(3.5rem, 5.5vw, 5rem) 2rem",
       }}
     >
-      <div className="wrap stack-lg">
+      <div className="wrap stack-lg" style={{ maxWidth: "1360px", margin: "0 auto", gap: "var(--s-4)" }}>
         <div className="row-between" style={{ alignItems: "flex-end" }}>
           <div className="stack" style={{ gap: "var(--s-2)" }}>
             <span

@@ -78,9 +78,9 @@ export function CoreWorkflowBento() {
   ];
 
   return (
-    <section id="workflows" style={{ padding: "clamp(4rem, 7vw, 6.5rem) 2rem", maxWidth: "1440px", margin: "0 auto" }}>
+    <section id="workflows" style={{ padding: "clamp(2rem, 3.5vw, 3rem) 2rem", maxWidth: "1440px", margin: "0 auto" }}>
       {/* Section Header */}
-      <div style={{ textAlign: "center", maxWidth: "720px", margin: "0 auto 3.5rem" }}>
+      <div style={{ textAlign: "center", maxWidth: "720px", margin: "0 auto 2rem" }}>
         <div className="tag-chip" style={{ marginBottom: "1rem" }}>
           <span className="tag-chip-check">✓</span>
           <span>Core Commercial Workflows</span>

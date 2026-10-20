@@ -27,13 +27,13 @@ export function BusinessRoiCalculator() {
   }, [invoicesCount, bankChannels, teamMembers]);
 
   return (
-    <section id="roi-calculator" style={{ padding: "clamp(4rem, 7vw, 6.5rem) 2rem", maxWidth: "1440px", margin: "0 auto" }}>
+    <section id="roi-calculator" style={{ padding: "clamp(2rem, 3.5vw, 3rem) 2rem", maxWidth: "1440px", margin: "0 auto" }}>
       <div
         style={{
           backgroundColor: "#FFFFFF",
           border: "1px solid #D8D2C5",
           borderRadius: "16px",
-          padding: "clamp(2rem, 5vw, 4rem)",
+          padding: "clamp(1.5rem, 3.5vw, 2.5rem)",
           boxShadow: "0 2px 12px rgba(20, 21, 20, 0.03)",
         }}
       >

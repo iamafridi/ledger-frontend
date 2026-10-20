@@ -39,15 +39,15 @@ export function SocialProofTestimonials() {
   ];
 
   return (
-    <section id="proof" style={{ padding: "clamp(4rem, 7vw, 6.5rem) 2rem", maxWidth: "1440px", margin: "0 auto" }}>
+    <section id="proof" style={{ padding: "clamp(2rem, 3.5vw, 3rem) 2rem", maxWidth: "1440px", margin: "0 auto" }}>
       {/* Metrics Banner */}
       <div
         style={{
           backgroundColor: "#141514",
           color: "#FFFDF7",
           borderRadius: "12px",
-          padding: "clamp(2rem, 4vw, 3rem)",
-          marginBottom: "4.5rem",
+          padding: "clamp(1.5rem, 3vw, 2.25rem)",
+          marginBottom: "2rem",
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
           gap: "2rem",
