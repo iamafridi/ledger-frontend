@@ -105,10 +105,10 @@ export function StackScrollSection() {
               />
               Architectural Non-Negotiables
             </span>
-            <h2 style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)", letterSpacing: "-0.03em", fontWeight: 800 }}>
+            <h2 style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)", letterSpacing: "-0.03em", fontWeight: 800, color: "#FFFFFF" }}>
               Why Ledger is Mathematically Superior
             </h2>
-            <p className="muted" style={{ maxWidth: "58ch", color: "var(--ink-muted)", margin: 0 }}>
+            <p className="muted" style={{ maxWidth: "58ch", color: "#B4B0A7", margin: 0 }}>
               Built from first principles for accountants, auditors, and enterprises who demand verifiable accuracy.
             </p>
           </div>
@@ -128,6 +128,10 @@ export function StackScrollSection() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                color: "#FFFFFF",
+                backgroundColor: "rgba(255, 255, 255, 0.06)",
+                cursor: "pointer",
               }}
               aria-label="Scroll left"
             >
@@ -146,8 +150,10 @@ export function StackScrollSection() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                borderColor: "rgba(184, 255, 46, 0.3)",
-                color: "var(--lime)",
+                border: "1px solid rgba(216, 84, 61, 0.5)",
+                color: "#E0634C",
+                backgroundColor: "rgba(216, 84, 61, 0.15)",
+                cursor: "pointer",
               }}
               aria-label="Scroll right"
             >
@@ -209,11 +215,11 @@ export function StackScrollSection() {
                   minWidth: "clamp(300px, 80vw, 420px)",
                   maxWidth: "420px",
                   scrollSnapAlign: "start",
-                  background: "linear-gradient(180deg, #0f141c 0%, #0a0e14 100%)",
-                  border: "1px solid rgba(184, 255, 46, 0.2)",
+                  background: "linear-gradient(180deg, #131722 0%, #0c1017 100%)",
+                  border: "1px solid rgba(255, 255, 255, 0.12)",
                   borderRadius: "var(--radius)",
                   padding: "var(--s-5)",
-                  boxShadow: "0 15px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(184, 255, 46, 0.05)",
+                  boxShadow: "0 15px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(216, 84, 61, 0.08)",
                   gap: "var(--s-3)",
                   flexShrink: 0,
                 }}
@@ -224,7 +230,7 @@ export function StackScrollSection() {
                       fontFamily: "var(--font-mono)",
                       fontSize: "var(--t-2xl)",
                       fontWeight: 900,
-                      color: "var(--lime)",
+                      color: "#E0634C",
                       lineHeight: 1,
                     }}
                   >
@@ -233,10 +239,11 @@ export function StackScrollSection() {
                   <span
                     className="chip"
                     style={{
-                      color: "var(--lime)",
-                      borderColor: "rgba(184, 255, 46, 0.3)",
-                      background: "rgba(184, 255, 46, 0.08)",
+                      color: "#E0634C",
+                      borderColor: "rgba(224, 99, 76, 0.4)",
+                      background: "rgba(216, 84, 61, 0.15)",
                       fontSize: "0.6875rem",
+                      fontWeight: 600,
                     }}
                   >
                     {item.badge}
@@ -244,13 +251,13 @@ export function StackScrollSection() {
                 </div>
 
                 <div>
-                  <h3 style={{ fontSize: "var(--t-lg)", margin: 0, fontWeight: 700 }}>{item.title}</h3>
-                  <p className="label" style={{ margin: "2px 0 0 0", color: "var(--ink-faint)", textTransform: "none" }}>
+                  <h3 style={{ fontSize: "var(--t-lg)", margin: 0, fontWeight: 700, color: "#FFFFFF" }}>{item.title}</h3>
+                  <p className="label" style={{ margin: "4px 0 0 0", color: "#D8D2C5", textTransform: "none", fontSize: "0.85rem" }}>
                     {item.subtitle}
                   </p>
                 </div>
 
-                <p className="muted" style={{ margin: 0, lineHeight: 1.65, color: "var(--ink-muted)", fontSize: "var(--t-sm)" }}>
+                <p className="muted" style={{ margin: 0, lineHeight: 1.65, color: "#B0ACA3", fontSize: "var(--t-sm)" }}>
                   {item.desc}
                 </p>
               </div>
@@ -267,7 +274,7 @@ export function StackScrollSection() {
                 width: activeIndex === idx ? "24px" : "8px",
                 height: "8px",
                 borderRadius: "var(--radius-pill)",
-                background: activeIndex === idx ? "var(--lime)" : "var(--line-firm)",
+                background: activeIndex === idx ? "#E0634C" : "rgba(255, 255, 255, 0.25)",
                 transition: "all var(--fast) var(--ease)",
               }}
             />
